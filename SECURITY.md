@@ -17,8 +17,8 @@ Include the following in your report:
 - Steps to reproduce
 - Potential impact
 
-You should receive a response within 5 business days. We will work with you to understand and address the issue before any public disclosure.
+For current reporting procedures, secure communication options, and response
+expectations, follow [Red Hat Product Security's published guidance](https://access.redhat.com/security/team/contact/).
 
-## Supported Versions
-
-Security updates are applied to the latest version on the `master` branch.
+This repository contains community-supported playbooks. This document does not
+establish a maintenance policy or support commitment for any branch or release.
