@@ -15,7 +15,7 @@ Performs a migration from CFME 5.7 to 5.8 utilizing steps from [Migrating to Red
 
 #### Required groups
 * cfme
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
@@ -35,7 +35,7 @@ Performs a migration from CFME 5.8 to 5.9 utilizing steps from [Migrating to Red
 
 #### Required groups
 * cfme
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
@@ -55,7 +55,7 @@ Performs a migration from CFME 5.9 to 5.10 utilizing steps from [Migrating to Re
 
 #### Required groups
 * cfme
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
@@ -70,7 +70,7 @@ Performs an update/upgrade of all packages on the CFME appliances and performs a
 
 #### Required groups
 * cfme
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
@@ -85,18 +85,18 @@ Performs an update/upgrade of all packages on all CFME appliances at the same ti
 
 #### Required groups
 * cfme
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
 | parameter                    | required | default | choices | comments
 |------------------------------|----------|---------|---------|-------------------------------------------------------------------
-| cfme_additional_repositories | No       |         |         | Additional repositories to configure when performing the update
+| cfme_addiitonal_repositories | No       |         |         | Additional repositories to configure when performing the update
 | sat6_org_id                  | No       |         |         | Satellite 6 organization ID (when using activation key below)
 | sat6_activation_key          | No       |         |         | Satellite 6 activation key (instead of direct subscribe to repos)
 
 ### smoke-test-service-provision.yml
-Smoke tests Service template provisioning and retirement.
+Smoke tests Service template provisioning and retirment.
 
 #### Required groups
 * cfme_ui_appliances
@@ -106,11 +106,11 @@ Smoke tests Service template provisioning and retirement.
 |-------------------------------------------|----------|---------|----------------------------------------------------------
 | cfme\_api\_user                           | Yes      |         | API user
 | cfme\_api\_password                       | Yes      |         | API password
-| cfme\_service\_catalog\_name              | Yes      |         | Service Catalog that contains the Service Template to test
-| cfme\_service\_template\_name             | Yes      |         | Service Template to test
+| cfme\_service\_catalog\_name              | Yes      |         | Service Catalog that contains the Service Tempalte to test
+| cfme\_service\_template\_name             | Yes      |         | Service Teamplte to test
 | cfme\_provision\_service\_dialog\_options | Yes      |         | Hash of dialog options to pass to the Service Template creation request
 | cfme\_provision\_service\_retries         | No       | 60      | Number of attempts at waiting for Provision Service task to complete
-| cfme\_provision\_service\_delay           | No       | 60      | Number of seconds between attempts at waiting for Provision Service task to complete
+| cfme\_provision\_service\_delay           | No       | 60      | Number of seconds between attempts at waiting for Provion Service task to complete
 | cfme\_retire\_service\_retries            | No       | 60      | Number of attempts at waiting for Retire Service task to complete
 | cfme\_retire\_service\_delay              | No       | 60      | Number of seconds between attempts at waiting for Retire Service task to complete
 
@@ -118,28 +118,28 @@ Smoke tests Service template provisioning and retirement.
 Start all of the DB services then all of the Appliance services.
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 ### stop-services.yml
 Stop all of the Appliance services then all of the DB services.
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 ### full-stop-start-services.yml
-Stop all of the Appliance services, then all of the DB services, then start all of the DB services, then all of the Appliance services, then perform a health check.
+Stop all of the Appliance services, then all of the DB services, then start all of the DB services, then all of the Appliance services, then perform a helath check.
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 ### health-check.yml
 Checks the health of the Appliances.
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 
 ### gather-logs.yml
 Gathers relevant logs from all of the appliances and puts them in an archive on the first DB host. Optionally emails the archive.
@@ -192,7 +192,7 @@ Changes the VMDB PostgreSQL password, updates the database.yml files, and restar
 * The playbook can be run with `ansible-playbook --vault-id @prompt playbooks/change_vmdb_password.yml` to prompt for the Ansible Vault password.
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 * cfme_databases
 
 #### Options
@@ -205,5 +205,5 @@ Disables Medium SSL Ciphers in the CloudForms webserver configuration (/etc/http
 * Addresses Tenable finding https://www.tenable.com/plugins/nessus/42873
 
 #### Required groups
-* cfme_appliances
+* cfme_appliancees
 

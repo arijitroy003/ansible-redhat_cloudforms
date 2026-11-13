@@ -2,8 +2,8 @@
 cfme_databases
 cfme_appliances
 
-# All appliances which are running evmserverd including database appliances which are not standalone.
-# Do not include HA / standalone databases which are not running evmserverd here.
+# All applicances which are running evmserverd including database appliances which are not standalone.
+# Do not include HA / standalone databasees which are not running evmserverd here.
 [cfme_appliances]
 cfmedb01 # Application running on database appliance.
 cfmeui01
